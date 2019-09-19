@@ -4,7 +4,6 @@
 #------------------------------------------------------------
 # Based on code from youtube addon
 #------------------------------------------------------------
-
 import os
 import sys
 import plugintools
@@ -21,15 +20,12 @@ YOUTUBE_CHANNEL_ID = "UCG29FnXZm4F5U8xpqs1cs1Q"
 # Entry point
 def run():
     plugintools.log("empirefiles.run")
-    
     # Get params
     params = plugintools.get_params()
-    
     if params.get("action") is None:
         main_list(params)
     else:
         pass
-    
     plugintools.close_item_list()
 
 # Main menu
@@ -42,5 +38,4 @@ def main_list(params):
         url="plugin://plugin.video.youtube/channel/"+YOUTUBE_CHANNEL_ID+"/",
         thumbnail=icon,
         folder=True )
-
 run()
